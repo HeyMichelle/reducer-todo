@@ -1,20 +1,23 @@
 import React from 'react';
+import '../../App.css';
 
-export default function TodoForm(props) {
-  return(
-    <div className="form-container">
-      
-        <form onSubmit={props.handleSubmit}>
-          <label>
-            <input 
-                type='text' 
-                name='description' 
-                onChange={props.handleChanges} />
-          </label>
-          <button type='submit'>Submit</button>
-          <button onClick={props.clearCompleted}>Clear Completed Tasks</button>
-        </form>
-      
+export default function TodoList(props) {
+  return (
+    <div>
+      <h2>Todo list component</h2>
+      <div>
+        {props.toDoList.map(task => {
+          return (
+            <div 
+              key={task.id}
+              className={task.completed ? 'completed-task task' : 'task'}
+              onClick={() => props.dispatch({ type: 'COMPLETED', payload: task.id })}
+            >
+              <p>{task.task}</p>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
