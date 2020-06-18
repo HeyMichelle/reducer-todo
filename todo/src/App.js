@@ -1,9 +1,9 @@
 
 import React, { useState, useReducer } from 'react';
 import { reducer, initialState } from './reducers/reducers';
-import TodoForm from './Components/TodoForm/TodoForm';
+import TodoForm from './components/TodoForm';
 import './App.css';
-import TodoList from './Components/TodoList/TodoList';
+import TodoList from './components/TodoList';
 
 function App() {
   const [toDoList, dispatch] = useReducer(reducer, initialState);
