@@ -41,6 +41,11 @@ export function reducer(state, action) {
     }
   }
 
+
+
+//other notes:
+
+
   // titleReducer is a place to organize all the actions we want to do for titles in the application. All of those actions get dispatched to this reducer, and the state gets updated here. The actions being performed are TOGGLE_EDITING and UPDATE_TITLE
 
 // Let’s define each building block of this pattern before we write our first reducer.
@@ -62,3 +67,5 @@ export function reducer(state, action) {
 // Actions are "dispatched" by dispatch functions
 
 // Export two things: initialState, titleReducer
+
+// do a to-d- on how this was made.

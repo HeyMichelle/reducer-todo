@@ -7,7 +7,11 @@ export default function TodoForm(props) {
       <div>
         <form onSubmit={props.handleSubmit}>
           <label>
-            <input type='text' name='description' onChange={props.handleChanges} />
+            <input 
+              type='text' 
+              name='description'
+              placeholder='Add task' 
+              onChange={props.handleChanges} />
           </label>
           <button type='submit'>Submit</button>
           <button onClick={props.clearCompleted}>Clear Completed Tasks</button>
